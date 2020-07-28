@@ -10,5 +10,9 @@ package com.codersbay.exoplanet;
  * @author Erik Wiesinger
  */
 public class Application {
+    private final String PATH = "files/Version2.csv";
     
+    public static void main(String[] args) {
+        
+    }
 }
