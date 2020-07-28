@@ -5,14 +5,22 @@
  */
 package com.codersbay.exoplanet;
 
+import java.util.List;
+
 /**
  *
  * @author Erik Wiesinger
  */
 public class Application {
-    private final String PATH = "files/Version2.csv";
-    
+
+    private static final String FILE = "/files/Version2.csv";
+    private static final String PHRASE = "Lick Observatory";
+
     public static void main(String[] args) {
+
+        InputFile input = new InputFile();
+        List<Planet> planets = input.read(FILE);
         
     }
+
 }
