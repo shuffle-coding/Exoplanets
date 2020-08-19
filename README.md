@@ -55,3 +55,5 @@ You can sort every property of the given objects:
 - pl_disc         Year the planet was discovered
 - pl_facility     Name of facility of planet discovery observations
 - pl_status       Status of the planet (1 = announced, 2 = submitted, 3 = accepted, 0 = retracted).
+
+## 3.2.Frontend
