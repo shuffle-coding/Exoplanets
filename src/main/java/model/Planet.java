@@ -2,7 +2,7 @@ package model;
 
 import java.time.Year;
 
-public class Planet {
+public class Planet implements Comparable<Planet>{
 
     private final int loc_rowid;
     private final String pl_hostname;
@@ -35,52 +35,44 @@ public class Planet {
     public int getLoc_rowid() {
         return loc_rowid;
     }
-
     public String getPl_hostname() {
         return pl_hostname;
     }
-
     public String getPl_letter() {
         return pl_letter;
     }
-
     public String getPl_name() {
         return pl_name;
     }
-
     public float getGaia_dist() {
         return gaia_dist;
     }
-
     public float getSt_teff() {
         return st_teff;
     }
-
     public float getSt_mass() {
         return st_mass;
     }
-
     public float getSt_rad() {
         return st_rad;
     }
-
     public String getRowupdate() {
         return rowupdate;
     }
-
     public Year getPl_disc() {
         return pl_disc;
     }
-
     public String getPl_facility() {
         return pl_facility;
     }
-
     public int getPl_status() {
         return pl_status;
     }
     
-    
+    @Override
+    public int compareTo (Planet o) {
+        return this.loc_rowid - o.getLoc_rowid();
+    }
 
     @Override
     public String toString() {

@@ -6,6 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Planets</servlet-name>
+        <url-pattern>/sort</url-pattern>
         <url-pattern>/all</url-pattern>
         <url-pattern>/filter</url-pattern>
     </servlet-mapping>
