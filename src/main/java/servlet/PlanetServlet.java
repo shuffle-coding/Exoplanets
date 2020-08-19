@@ -13,6 +13,7 @@ import com.google.common.collect.Multiset;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -91,6 +92,11 @@ public class PlanetServlet extends HttpServlet {
         
         switch(property){
             case "loc_rowid":
+                for (Planet planet : planets) {
+                    if (planet.getLoc_rowid() == Integer.getInteger(criteria)) {
+                        result.add(planet);
+                    }
+                }
                 break;
             case "pl_hostname":
                 for (Planet planet : planets) {
@@ -114,20 +120,60 @@ public class PlanetServlet extends HttpServlet {
                 }
                 break;
             case "gaia_dist":
+                for (Planet planet : planets) {
+                    if (planet.getGaia_dist() == Integer.getInteger(criteria)) {
+                        result.add(planet);
+                    }
+                }
                 break;
             case "st_teff":
+                for (Planet planet : planets) {
+                    if (planet.getSt_teff() == Integer.getInteger(criteria)) {
+                        result.add(planet);
+                    }
+                }
                 break;
             case "st_mass":
+                for (Planet planet : planets) {
+                    if (planet.getSt_mass() == Integer.getInteger(criteria)) {
+                        result.add(planet);
+                    }
+                }
                 break;
             case "st_rad":
+                for (Planet planet : planets) {
+                    if (planet.getSt_rad() == Integer.getInteger(criteria)) {
+                        result.add(planet);
+                    }
+                }
                 break;
             case "rowupdate":
+                for (Planet planet : planets) {
+                    if (planet.getRowupdate().toLowerCase().contains(criteria)) {
+                        result.add(planet);
+                    }
+                }
                 break;
             case "pl_disc":
+                for (Planet planet : planets) {
+                    if (planet.getPl_disc().getValue() == (Integer.getInteger(criteria))) {
+                        result.add(planet);
+                    }
+                }
                 break;
             case "pl_facility":
+                for (Planet planet : planets) {
+                    if (planet.getPl_facility().toLowerCase().contains(criteria)) {
+                        result.add(planet);
+                    }
+                }
                 break;
             case "pl_status":
+                for (Planet planet : planets) {
+                    if (planet.getPl_status() == Integer.getInteger(criteria)) {
+                        result.add(planet);
+                    }
+                }
                 break;
         }        
         
